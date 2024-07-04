@@ -6,34 +6,40 @@ function Questions() {
   const navigate = useNavigate();
 
   const [questionIndex, setquestionIndex] = useState(0);
+
+  const tick1Value = option.tick.value;
   const questions = [
     {
       id: 1,
-      question: "Combien de femmes employez-vous ?",
+      question: "Quel est le pourcentage de femmes dans votre entreprise ?",
       options: [
         {
           type: "radio",
-          id: "less-10",
+          id: "less-5",
           name: "female-employees-1",
-          option: "10% et moins",
+          option: "5% et moins",
+          tick: 0,
         },
         {
           type: "radio",
-          id: "10-20",
+          id: "5-16",
           name: "female-employees-1",
-          option: "10% à 20%",
+          option: "5% à 16%",
+          tick: 0,
         },
         {
           type: "radio",
-          id: "20-30",
+          id: "16-30",
           name: "female-employees-1",
-          option: "20% à 30%",
+          option: "16% à 30%",
+          tick: 1,
         },
         {
           type: "radio",
           id: "30+",
           name: "female-employees-1",
           option: "30% ou plus",
+          tick: 1,
         },
       ],
     },

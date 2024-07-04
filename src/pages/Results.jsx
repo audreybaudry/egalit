@@ -1,43 +1,56 @@
 import "./style/Results.scss";
+import { useContext } from "react";
+import Highcharts from "highcharts";
+import HighchartsReact from "highcharts-react-official";
 import tick from "../assets/images/green-tick.png";
 import redcross from "../assets/images/red-cross.png";
+import { DyslexicContext } from "../context/DyslexicContext";
 
 function Results() {
+  const { dataFemale, dataMale } = useContext(DyslexicContext);
+  console.log(`LAAAAAA : ${dataFemale}`);
+  const dataMalePt = Math.floor(dataMale * 100);
+  const dataFemalePt = Math.floor(dataFemale * 100);
+
+  const optionGraph1 = {
+    chart: {
+      type: "pie",
+    },
+    title: {
+      text: "Répartition des hommes et femmes en entreprise IT",
+    },
+    series: [
+      {
+        name: "%",
+        colorByPoint: true,
+        data: [
+          {
+            name: "Femmes",
+            y: dataFemalePt,
+            color: "#6d39a8",
+          },
+          {
+            name: "Hommes",
+            y: dataMalePt,
+            color: "#ffde59",
+          },
+        ],
+      },
+    ],
+  };
+
   const results = [
     {
       index: 1,
       title: "La présence des femmes",
-      tick,
-      diagram:
-        "https://media.nouvelobs.com/ext/uri/sreferentiel.nouvelobs.com/file/rue89/8207db15624fe1548440d206c780fe8f.jpg",
+      tick: resultsTick1,
+      options: optionGraph1,
     },
     {
       index: 2,
-      title: "Le salaire des femmes",
+      title: "La présence des femmes",
       tick: redcross,
-      diagram:
-        "https://media.nouvelobs.com/ext/uri/sreferentiel.nouvelobs.com/file/rue89/8207db15624fe1548440d206c780fe8f.jpg",
-    },
-    {
-      index: 3,
-      title: "Le salaire des femmes",
-      tick: redcross,
-      diagram:
-        "https://media.nouvelobs.com/ext/uri/sreferentiel.nouvelobs.com/file/rue89/8207db15624fe1548440d206c780fe8f.jpg",
-    },
-    {
-      index: 4,
-      title: "Le salaire des femmes",
-      tick: redcross,
-      diagram:
-        "https://media.nouvelobs.com/ext/uri/sreferentiel.nouvelobs.com/file/rue89/8207db15624fe1548440d206c780fe8f.jpg",
-    },
-    {
-      index: 5,
-      title: "Le salaire des femmes",
-      tick,
-      diagram:
-        "https://media.nouvelobs.com/ext/uri/sreferentiel.nouvelobs.com/file/rue89/8207db15624fe1548440d206c780fe8f.jpg",
+      options: optionGraph1,
     },
   ];
 
@@ -59,10 +72,9 @@ function Results() {
               />
             </div>
             <div className="img-diagram">
-              <img
-                className="diagram"
-                alt="diagramme représentant les résultats"
-                src={result.diagram}
+              <HighchartsReact
+                highcharts={Highcharts}
+                options={result.options}
               />
             </div>
             <div className="entreprise">
