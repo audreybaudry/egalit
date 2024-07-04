@@ -1,0 +1,39 @@
+@import "./assets/fonts/fonts.scss";
+
+/* Autres styles */
+:root {
+  --first-font: "PixappInter-Bg48";
+  --dyslexic-font: "OpenDyslexic", sans-serif;
+  --second-font: "Broken Console Bold";
+  --normal-font: "Montserrat";
+  --font-size: 16px;
+  --purple: #6d39a8;
+  --yellow: #ffde59;
+  --pink: #ed25b1;
+  --blue: #39e6f6;
+  --white: rgb(255, 255, 255);
+  --black: #000000;
+}
+
+* {
+  margin: 0;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  font-family: var(--first-font);
+  background-color: var(--purple);
+}
+
+body.dyslexic-font {
+  font-family: var(--dyslexic-font);
+}
+
+body a {
+  text-decoration: none;
+}
+
+button:hover {
+  cursor: pointer;
+}

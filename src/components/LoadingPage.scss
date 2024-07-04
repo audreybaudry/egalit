@@ -1,0 +1,16 @@
+.loading-page {
+  font-size: 3em;
+  width: 70%;
+  margin: auto;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  margin-top: 2em;
+  gap: 2em;
+  color: var(--yellow);
+  img {
+    width: 20%;
+  }
+}

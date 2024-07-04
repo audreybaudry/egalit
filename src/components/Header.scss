@@ -1,0 +1,84 @@
+@import "../assets/fonts/fonts.scss";
+
+.header-container {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  padding-left: 2em;
+  padding-right: 2em;
+  padding-top: 2em;
+  background-color: var(--purple);
+  h1 {
+    font-family: var(--second-font);
+    color: var(--yellow);
+    font-size: 7em;
+    text-shadow: 3px 2px 0px var(--pink);
+    margin-left: 0.8em;
+  }
+
+  .btn-dys {
+    background-color: var(--blue);
+    border-radius: 25px;
+    border-left: 2px solid rgb(68, 122, 198);
+    border: none;
+    box-shadow: 4px 2px 0px var(--yellow);
+    height: 50px;
+    margin-right: 6em;
+    margin-left: -2.4em;
+  }
+
+  button:hover {
+    transform: scale(1.2);
+    transition: 0.5s;
+    box-shadow: none;
+  }
+
+  img {
+    height: 40px;
+    width: 40px;
+  }
+}
+
+.dyslexique-container {
+  display: flex;
+  flex-direction: row-reverse;
+  justify-content: center;
+  align-items: start;
+}
+.dys-message {
+  background-color: var(--blue);
+  font-family: var(--dyslexic-font);
+  border-radius: 25px;
+  padding: 0.5em;
+  padding-left: 1em;
+  padding-right: 2em;
+  margin-top: 0.2em;
+
+  border: 2px solid var(--yellow);
+}
+
+#btn-off {
+  background-color: green;
+  margin-left: 0.5em;
+  color: white;
+  border-radius: 25px;
+  border: none;
+  font-family: var(--dyslexic-font);
+}
+#btn-on {
+  background-color: rgb(103, 76, 76);
+  color: white;
+  margin-left: 0.5em;
+  border-radius: 25px;
+  border: none;
+  font-family: var(--dyslexic-font);
+}
+.link-ressources {
+  display: inline;
+  a {
+    text-decoration: none;
+    color: var(--yellow);
+    font-size: 2em;
+  }
+}

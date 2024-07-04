@@ -1,0 +1,102 @@
+.good-practices-section {
+  margin-top: 6em;
+  font-size: 1.1em;
+  h3 {
+    font-size: 3em;
+    color: var(--yellow);
+    text-align: center;
+    text-shadow: 2px 2px 0em var(--pink);
+  }
+}
+
+.section-bilan-inequalities {
+  color: black;
+
+  h4 {
+    font-size: 2em;
+    margin-top: 1em;
+    margin-bottom: 0.5em;
+    padding-top: 0.5em;
+    color: white;
+    border-top: 1px solid var(--blue);
+  }
+}
+.intro-inequalities {
+  color: white;
+  text-align: center;
+  margin: auto;
+  padding-top: 2em;
+  width: 50%;
+}
+
+.one-info-container-left {
+  width: 70%;
+  margin-top: 1em;
+  box-shadow: 5px 3px 0px var(--blue);
+
+  h4 {
+    padding-left: 0.5em;
+  }
+}
+.one-info-container-right {
+  width: 70%;
+  margin-top: 1em;
+  margin-left: 30%;
+  text-align: end;
+  box-shadow: -3px 3px 0px var(--blue);
+  border-left: 3px solid var(--blue);
+  h4 {
+    padding-right: 0.5em;
+  }
+}
+
+.description-info-container {
+  background-color: var(--white);
+  padding: 0.5em 2em 0.5em 2em;
+
+  a {
+    background-color: var(--yellow);
+    color: black;
+    margin-left: 1em;
+    padding: 0.2em;
+    font-size: 0.6em;
+    font-variant: small-caps;
+  }
+}
+
+.color-pink {
+  color: var(--pink);
+}
+
+.section-good-practices {
+  margin-top: 3em;
+  h3 {
+    font-size: 4em;
+  }
+}
+
+.all-good-practices {
+  display: flex;
+  margin-top: 2em;
+  flex-direction: row;
+  justify-content: space-evenly;
+  align-items: start;
+}
+
+.one-good-practice {
+  width: 20%;
+  padding: 0.5em;
+
+  h5 {
+    box-shadow: 5px 5px 0px var(--pink);
+    margin-bottom: 1em;
+    background-color: white;
+    padding: 0.5em;
+    font-size: 1.5em;
+  }
+}
+
+.desc-one-good-practice {
+  background-color: white;
+  padding: 0.5em;
+}
